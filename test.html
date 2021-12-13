@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- Create a canvas-->
+    <canvas width="600" height="600"></canvas>
+    <script>
+        //Select the canvas object
+        let varCanvas = document.querySelector("canvas");
+        //Get the context
+        let context = varCanvas.getContext("2d");
+
+        //Set colour to blue
+        context.lineWidth = 4;
+
+        // SIMPLE OPTION: fill with blue square
+        //context.fillRect(100, 100, 400, 400); //[x1, y1, x2, y2]
+
+        // MORE COMPLICATED OPTION: fill with blue square
+        context.beginPath();
+        context.rect(100, 100, 400, 400)
+        context.stroke();
+
+        //Draw a circle
+        context.beginPath()
+        context.arc(300, 300, 100, 0, 1.75*Math.PI);
+        context.stroke();
+
+    </script>
+
+    <script src="./async_example.js"></script>
+</body>
+
+</html>
